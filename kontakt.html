@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakta Oss - Kreativa Studion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Global Navigation -->
+    <header class="site-header">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html">Kreativa<span>Studion</span></a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Hem</a></li>
+                    <li><a href="produkt-1.html">Webbkurs</a></li>
+                    <li><a href="produkt-2.html">Materialkit</a></li>
+                    <li><a href="nyhetsbrev.html">Nyhetsbrev</a></li>
+                    <li><a href="kontakt.html" class="active">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contact Page Section -->
+    <main class="contact-page container">
+        <div class="section-title">
+            <h1>Kontakta oss</h1>
+            <p>Har du frågor om våra kurser, materialkit eller vill du diskutera ett samarbete? Skicka ett meddelande!</p>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-info">
+                <img src="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?auto=format&fit=crop&w=800&q=80" alt="Kontakta oss på Kreativa Studion">
+                <div class="info-blocks">
+                    <h3>Kontaktuppgifter</h3>
+                    <p><strong>E-post:</strong> info@kreativastudion.se</p>
+                    <p><strong>Telefon:</strong> 08-123 45 67 (Mån-Fre 09:00 - 15:00)</p>
+                    <p><strong>Adress:</strong> Skapargatan 12, 111 22 Stockholm</p>
+                </div>
+            </div>
+
+            <div class="contact-form-container">
+                <div class="form-box">
+                    <h3>Skicka ett direktmeddelande</h3>
+                    <p class="form-subtitle">Vi svarar normalt inom 24 timmar på vardagar.</p>
+                    
+                    <form id="form-kontakt" action="thank-you.html" method="GET">
+                        <div class="form-group">
+                            <label for="c-name">Namn *</label>
+                            <input type="text" id="c-name" name="name" required placeholder="Ditt fullständiga namn">
+                        </div>
+                        <div class="form-group">
+                            <label for="c-email">E-postadress *</label>
+                            <input type="email" id="c-email" name="email" required placeholder="namn@företag.se">
+                        </div>
+                        <div class="form-group">
+                            <label for="c-subject">Ärende</label>
+                            <select id="c-subject" name="subject">
+                                <option value="kurs">Frågor om webbkurser</option>
+                                <option value="material">Frågor om materialkit</option>
+                                <option value="support">Teknisk support / Övrigt</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="c-message">Meddelande *</label>
+                            <textarea id="c-message" name="message" rows="5" required placeholder="Skriv din fråga eller fundering här..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block" id="cta-submit-kontakt">Skicka meddelande</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Global Footer -->
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 Kreativa Studion. Alla rättigheter reserverade. Webbplatsen används i utbildningssyfte för analys och effektmätning.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

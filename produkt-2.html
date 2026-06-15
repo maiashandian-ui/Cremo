@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Materialkit: Det Kompletta Skaparpaketet - Kreativa Studion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Global Navigation -->
+    <header class="site-header">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html">Kreativa<span>Studion</span></a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Hem</a></li>
+                    <li><a href="produkt-1.html">Webbkurs</a></li>
+                    <li><a href="produkt-2.html" class="active">Materialkit</a></li>
+                    <li><a href="nyhetsbrev.html">Nyhetsbrev</a></li>
+                    <li><a href="kontakt.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Product Detail Section -->
+    <main class="product-page container">
+        <div class="product-grid">
+            <div class="product-gallery">
+                <img src="https://images.unsplash.com/photo-1459865264687-595d652de67e?auto=format&fit=crop&w=800&q=80" alt="Premium konstnärsmaterial kit">
+            </div>
+            <div class="product-details">
+                <span class="category-badge">Exklusiv Produkt</span>
+                <h1>Premium Materialkit: Det Kompletta Skaparpaketet</h1>
+                <p class="price">649 kr <span class="price-info">(Frakt tillkommer på 49 kr)</span></p>
+                
+                <div class="description">
+                    <p>Undvik gissningarna i konstnärsbutiken. Detta handplockade materialkit innehåller exakt de verktyg och pigment som rekommenderas av våra kursledare. Perfekt anpassat för både nybörjare och erfarenhetsrika kreatörer som vill uppgradera sin utrustning.</p>
+                    
+                    <h3>Kitet innehåller:</h3>
+                    <ul>
+                        <li>12x Studiotubpigment med professionell ljusäkthet</li>
+                        <li>3x Handgjorda syntetpenslar (Rund nr 4, 8 samt en platt modlare)</li>
+                        <li>1x Block av 100% bomullspapper (300g/m², kallpressat, 20 blad)</li>
+                        <li>1x Smidig blandkopp i porslin</li>
+                    </ul>
+                </div>
+
+                <!-- Form Container for Future Order/HubSpot Tracking -->
+                <div class="form-box" id="hubspot-product-form-placeholder">
+                    <h3>Beställ eller förhandsboka ditt kit</h3>
+                    <p class="form-subtitle">Lämna dina uppgifter nedan för att lägga en beställningsförfrågan.</p>
+                    
+                    <form id="form-produkt-2" action="thank-you.html" method="GET">
+                        <div class="form-group">
+                            <label for="p2-name">Namn *</label>
+                            <input type="text" id="p2-name" name="name" required placeholder="T.ex. Johan Nilsson">
+                        </div>
+                        <div class="form-group">
+                            <label for="p2-email">E-postadress *</label>
+                            <input type="email" id="p2-email" name="email" required placeholder="T.ex. johan@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="p2-quantity">Antal kit</label>
+                            <select id="p2-quantity" name="quantity">
+                                <option value="1">1 st - 649 kr</option>
+                                <option value="2">2 st - 1298 kr</option>
+                                <option value="3">3 st - 1947 kr</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block" id="cta-submit-material">Skicka beställningsförfrågan</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Global Footer -->
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 Kreativa Studion. Alla rättigheter reserverade. Webbplatsen används i utbildningssyfte för analys och effektmätning.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

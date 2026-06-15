@@ -1,0 +1,529 @@
+/* ==========================================================================
+   Kreativa Studion - Huvudstylesheet (Anpassad för Analys & Effektmätning)
+   ========================================================================== */
+
+/* Resets & Basstilar */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-color: #c97a63;      /* Terracotta Accent för primära CTA-knappar */
+    --primary-dark: #b2654f;
+    --secondary-color: #4a6b5d;    /* Skogsgrön profilfärg */
+    --text-color: #2c2523;         /* Mörk grafit/charcoal */
+    --bg-light: #faf6f0;           /* Varm vit/creme för bakgrund */
+    --white: #ffffff;
+    --gray-muted: #766e6c;
+    --border-color: #e6dfd5;
+    --border-radius: 8px;
+    --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    font-family: var(--font-stack);
+    background-color: var(--bg-light);
+    color: var(--text-color);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--border-radius);
+}
+
+/* Header & Navigation */
+.site-header {
+    background-color: var(--white);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.logo a {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    text-decoration: none;
+    letter-spacing: -0.5px;
+}
+
+.logo span {
+    color: var(--primary-color);
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.2s ease;
+    padding: 5px 0;
+}
+
+.main-nav a:hover, 
+.main-nav a.active {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+/* Knappar / CTA */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    transition: all 0.2s ease;
+    cursor: pointer;
+    border: none;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--secondary-color);
+    color: var(--white);
+}
+
+.btn-card {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    font-size: 0.9rem;
+    padding: 10px 20px;
+    width: 100%;
+}
+
+.btn-card:hover {
+    opacity: 0.9;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+.badge {
+    display: inline-block;
+    background-color: #eef2f0;
+    color: var(--secondary-color);
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-radius: 50px;
+    margin-bottom: 15px;
+}
+
+.category-badge {
+    display: inline-block;
+    background-color: #fdf0ec;
+    color: var(--primary-color);
+    padding: 4px 10px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 60px 0;
+    background-color: var(--white);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+}
+
+.hero-text p {
+    font-size: 1.15rem;
+    color: var(--gray-muted);
+    margin-bottom: 30px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 15px;
+}
+
+/* Features / Grid Section */
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 50px;
+}
+
+.section-title h2 {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: var(--gray-muted);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.card {
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.card-img {
+    border-radius: 0;
+    height: 240px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.card-content {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-content h3 {
+    margin-bottom: 12px;
+    font-size: 1.3rem;
+    color: var(--secondary-color);
+}
+
+.card-content p {
+    color: var(--gray-muted);
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+/* Teaser / Marketing Bar */
+.teaser-section {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: 60px 0;
+    text-align: center;
+    margin-top: auto;
+}
+
+.teaser-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.teaser-content h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.teaser-content p {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    opacity: 0.9;
+}
+
+/* Produktsidor & Layout */
+.product-page {
+    padding: 40px 0 60px 0;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: start;
+}
+
+.product-details h1 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    color: var(--secondary-color);
+}
+
+.price {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.price-info {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--gray-muted);
+}
+
+.description {
+    margin-bottom: 30px;
+}
+
+.description p {
+    margin-bottom: 15px;
+}
+
+.description h3 {
+    margin: 20px 0 10px 0;
+    color: var(--secondary-color);
+}
+
+.description ul {
+    list-style-position: inside;
+    margin-bottom: 20px;
+}
+
+.description li {
+    margin-bottom: 5px;
+}
+
+/* Formulär Design (Viktigt för Hubspot/Mailchimp simulering) */
+.form-box {
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+}
+
+.form-box h3 {
+    margin-bottom: 5px;
+    font-size: 1.25rem;
+}
+
+.form-subtitle {
+    font-size: 0.9rem;
+    color: var(--gray-muted);
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-family: var(--font-stack);
+    font-size: 0.95rem;
+    color: var(--text-color);
+    transition: border-color 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+}
+
+.form-checkbox-group {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    font-size: 0.85rem;
+    color: var(--gray-muted);
+}
+
+.form-checkbox-group input {
+    margin-top: 3px;
+}
+
+/* Centrerade sidor (Nyhetsbrev / Thank You) */
+.page-centered {
+    padding: 50px 0;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-large {
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    max-width: 900px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    overflow: hidden;
+}
+
+.card-large-image img {
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-large-content {
+    padding: 40px;
+}
+
+.card-large-content h1 {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.benefits-list {
+    margin: 20px 0;
+}
+
+.benefits-list p {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+/* Kontaktsida */
+.contact-page {
+    padding: 40px 0 60px 0;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-blocks h3 {
+    margin-bottom: 15px;
+    color: var(--secondary-color);
+}
+
+.info-blocks p {
+    margin-bottom: 10px;
+}
+
+/* Global Footer */
+.site-footer {
+    background-color: #222;
+    color: #999;
+    padding: 25px 0;
+    text-align: center;
+    font-size: 0.85rem;
+    border-top: 1px solid #333;
+}
+
+/* Responsivitet - Media Queries */
+@media (max-width: 850px) {
+    .hero-grid, 
+    .features-grid, 
+    .product-grid, 
+    .card-large, 
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .card-large-image {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .main-nav ul {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-actions {
+        flex-direction: column;
+    }
+}
